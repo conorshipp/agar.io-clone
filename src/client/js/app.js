@@ -137,9 +137,6 @@ showMassSetting.onchange = window.chat.toggleMass;
 var continuitySetting = document.getElementById('continuity');
 continuitySetting.onchange = window.chat.toggleContinuity;
 
-var roundFoodSetting = document.getElementById('roundFood');
-roundFoodSetting.onchange = window.chat.toggleRoundFood;
-
 var darkModeSetting = document.getElementById ('darkMode');
 darkModeSetting.onchange = window.chat.toggleDarkMode;
 
