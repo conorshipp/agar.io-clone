@@ -129,16 +129,19 @@ window.canvas = new Canvas();
 window.chat = new ChatClient();
 
 var visibleBorderSetting = document.getElementById('visBord');
-visibleBorderSetting.onchange = settings.toggleBorder;
+visibleBorderSetting.onchange = window.chat.toggleBorder;
 
 var showMassSetting = document.getElementById('showMass');
-showMassSetting.onchange = settings.toggleMass;
+showMassSetting.onchange = window.chat.toggleMass;
 
 var continuitySetting = document.getElementById('continuity');
-continuitySetting.onchange = settings.toggleContinuity;
+continuitySetting.onchange = window.chat.toggleContinuity;
 
 var roundFoodSetting = document.getElementById('roundFood');
-roundFoodSetting.onchange = settings.toggleRoundFood;
+roundFoodSetting.onchange = window.chat.toggleRoundFood;
+
+var darkModeSetting = document.getElementById ('darkMode');
+darkModeSetting.onchange = window.chat.toggleDarkMode;
 
 var c = window.canvas.cv;
 var graph = c.getContext('2d');
