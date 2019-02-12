@@ -170,51 +170,51 @@ class ChatClient {
         if (global.backgroundColor === LIGHT) {
             global.backgroundColor = DARK;
             global.lineColor = LINEDARK;
-            this.addSystemLine('Dark mode enabled.');
+            window.chat.addSystemLine('Dark mode enabled.');
         } else {
             global.backgroundColor = LIGHT;
             global.lineColor = LINELIGHT;
-            this.addSystemLine('Dark mode disabled.');
+            window.chat.addSystemLine('Dark mode disabled.');
         }
     }
 
     toggleBorder() {
         if (!global.borderDraw) {
             global.borderDraw = true;
-            this.addSystemLine('Showing border.');
+            window.chat.addSystemLine('Showing border.');
         } else {
             global.borderDraw = false;
-            this.addSystemLine('Hiding border.');
+            window.chat.addSystemLine('Hiding border.');
         }
     }
 
     toggleMass() {
         if (global.toggleMassState === 0) {
             global.toggleMassState = 1;
-            this.addSystemLine('Viewing mass enabled.');
+            window.chat.addSystemLine('Viewing mass enabled.');
         } else {
             global.toggleMassState = 0;
-            this.addSystemLine('Viewing mass disabled.');
+            window.chat.addSystemLine('Viewing mass disabled.');
         }
     }
 
     toggleContinuity() {
         if (!global.continuity) {
             global.continuity = true;
-            this.addSystemLine('Continuity enabled.');
+            window.chat.addSystemLine('Continuity enabled.');
         } else {
             global.continuity = false;
-            this.addSystemLine('Continuity disabled.');
+            window.chat.addSystemLine('Continuity disabled.');
         }
     }
 
     toggleRoundFood(args) {
         if (args || global.foodSides < 10) {
             global.foodSides = (args && !isNaN(args[0]) && +args[0] >= 3) ? +args[0] : 10;
-            this.addSystemLine('Food is now rounded!');
+            window.chat.addSystemLine('Food is now rounded!');
         } else {
             global.foodSides = 5;
-            this.addSystemLine('Food is no longer rounded!');
+            window.chat.addSystemLine('Food is no longer rounded!');
         }
     }
 }
